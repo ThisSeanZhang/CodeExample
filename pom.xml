@@ -13,6 +13,8 @@
         <module>byte-buddy</module>
         <module>kafka</module>
         <module>static-filed-change</module>
+        <module>chart-tools</module>
+        <module>algorithm</module>
     </modules>
 
     <dependencies>
