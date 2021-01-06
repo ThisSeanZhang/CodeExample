@@ -15,6 +15,7 @@
         <module>static-filed-change</module>
         <module>chart-tools</module>
         <module>algorithm</module>
+        <module>logging</module>
     </modules>
 
     <dependencies>
