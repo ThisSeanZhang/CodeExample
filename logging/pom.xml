@@ -13,6 +13,7 @@
 
     <modules>
         <module>java-logging</module>
+        <module>SLF4J</module>
     </modules>
 
 </project>
