@@ -18,6 +18,7 @@
         <module>logging</module>
         <module>server</module>
         <module>thread</module>
+        <module>function</module>
     </modules>
 
     <dependencies>
