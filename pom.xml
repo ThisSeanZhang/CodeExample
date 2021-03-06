@@ -19,7 +19,6 @@
         <module>server</module>
         <module>thread</module>
         <module>function</module>
-        <module>simple-database-connection-pool</module>
     </modules>
 
     <dependencies>
