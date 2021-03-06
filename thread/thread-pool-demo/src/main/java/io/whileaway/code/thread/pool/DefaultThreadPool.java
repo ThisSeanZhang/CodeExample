@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.stream.IntStream;
 
 public class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> {
 
@@ -56,8 +55,8 @@ public class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> 
     @Override
     public void removeWorker(int num) {
         synchronized (jobs) {
-            if (num >= this.workerNum) {
-                throw new IllegalArgumentException("beyound workNum");
+            if (num < 0) {
+                throw new IllegalArgumentException("not less then 0");
             }
             int count = 0;
             while (count < num) {
