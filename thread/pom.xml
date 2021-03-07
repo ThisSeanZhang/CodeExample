@@ -13,6 +13,7 @@
         <module>concurrency-book</module>
         <module>simple-database-connection-pool</module>
         <module>thread-pool-demo</module>
+        <module>simple-web-server</module>
     </modules>
     <artifactId>thread</artifactId>
 
