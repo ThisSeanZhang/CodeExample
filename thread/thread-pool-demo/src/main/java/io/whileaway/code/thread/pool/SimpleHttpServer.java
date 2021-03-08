@@ -7,7 +7,8 @@ import java.net.Socket;
 public class SimpleHttpServer {
 
     public static void main(String[] args) throws Exception{
-        SimpleHttpServer.setBasePath("D:\\projects\\codeexample\\thread\\thread-pool-demo\\src\\main\\resources");
+//        SimpleHttpServer.setBasePath("D:\\projects\\codeexample\\thread\\thread-pool-demo\\src\\main\\resources");
+        SimpleHttpServer.setBasePath("D:\\whileaway\\CodeExample\\thread\\thread-pool-demo\\src\\main\\resources");
         SimpleHttpServer.start();
     }
 
@@ -104,7 +105,7 @@ public class SimpleHttpServer {
         if (closeables != null) {
             for(Closeable closeable : closeables) {
                 try {
-                    if (closeable !=null) {
+                    if (closeable != null) {
                         closeable.close();
                     }
                 } catch (IOException e) {
