@@ -30,7 +30,7 @@ public class ConnectionPool {
 
     public Connection fetchConnection(long mills) throws InterruptedException {
         synchronized (pool) {
-            Supplier<Boolean> timeout = mills <= 0 ? () -> true : getTimeoutSupplier(mills);
+            Supplier<Boolean> timeout = getTimeoutSupplier(mills);
             while (pool.isEmpty() && timeout.get()) {
                 pool.wait();
             }
@@ -40,7 +40,7 @@ public class ConnectionPool {
 
     private static Supplier<Boolean> getTimeoutSupplier(long mills) {
         long future = System.currentTimeMillis() + mills;
-        return () -> future > System.currentTimeMillis();
+        return mills <= 0 ? () -> true : () -> future > System.currentTimeMillis();
     }
 
 }
