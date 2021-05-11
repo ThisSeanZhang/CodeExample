@@ -2,6 +2,8 @@ package io.whileaway.code;
 
 import java.sql.Connection;
 import java.util.LinkedList;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
@@ -41,6 +43,14 @@ public class ConnectionPool {
     private static Supplier<Boolean> getTimeoutSupplier(long mills) {
         long future = System.currentTimeMillis() + mills;
         return mills <= 0 ? () -> true : () -> future > System.currentTimeMillis();
+    }
+
+    public static void main(String[] args) {
+        ArrayBlockingQueue
+    }
+
+    public static int aa(int c) {
+        return c == (c = c * 1) ? 777 : c;
     }
 
 }
