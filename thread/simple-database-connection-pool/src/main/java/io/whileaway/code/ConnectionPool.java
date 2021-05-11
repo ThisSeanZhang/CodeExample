@@ -46,11 +46,11 @@ public class ConnectionPool {
     }
 
     public static void main(String[] args) {
-        ArrayBlockingQueue
+        System.out.println(aa(2));;
     }
 
     public static int aa(int c) {
-        return c == (c = c * 1) ? 777 : c;
+        return c == (c = c | 1) ? 777 : c;
     }
 
 }
