@@ -27,6 +27,7 @@ import java.math.BigInteger;
  * a magic number ('F' or 0x46) and a 32-bit length prefix.  For example, 42
  * will be encoded to { 'F', 0, 0, 0, 1, 42 }.
  */
+// out
 public class NumberEncoder extends MessageToByteEncoder<Number> {
 
     @Override
