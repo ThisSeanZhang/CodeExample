@@ -20,10 +20,17 @@ public class TimeClient {
             b.group(workerGroup); // (2)
             b.channel(NioSocketChannel.class); // (3)
             b.option(ChannelOption.SO_KEEPALIVE, true); // (4)
+//            b.handler(new ChannelInitializer<SocketChannel>() {
+//                @Override
+//                public void initChannel(SocketChannel ch) throws Exception {
+//                    ch.pipeline().addLast(new TimeClientHandler());
+//                }
+//            });
+
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new TimeClientHandler());
+                    ch.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
                 }
             });
 
