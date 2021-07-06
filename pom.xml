@@ -19,6 +19,8 @@
         <module>server</module>
         <module>thread</module>
         <module>function</module>
+        <module>java-management</module>
+        <module>base-code</module>
     </modules>
 
     <dependencies>
