@@ -11,6 +11,10 @@
     <packaging>pom</packaging>
     <artifactId>logging</artifactId>
 
+    <properties>
+        <logback.classic.version>1.2.0</logback.classic.version>
+    </properties>
+
     <modules>
         <module>java-logging</module>
         <module>SLF4J</module>
